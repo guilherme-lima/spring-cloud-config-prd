@@ -3,13 +3,12 @@ server:
 
 eureka:
   server:
-    enableSelfPreservation: true
+    wait-time-in-ms-when-sync-empty: 3000
   instance:
     hostname: localhost
+    lease-renewal-interval-in-seconds: 1
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
