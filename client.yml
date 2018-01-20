@@ -1,9 +1,7 @@
 ---
-profileName: Production
 spring:
   profiles: production
   
 ---
-profileName: Development
 spring:
   profiles: development
